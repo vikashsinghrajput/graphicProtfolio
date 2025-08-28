@@ -14,12 +14,9 @@ import AboutUs from "./Componetes/AboutUs/AboutUs";
 import Navbar from "./Componetes/Layout/Navbar/Navbar";
 import ProjectsSection from "./Componetes/Projects/ProjectsSection";
 import ProtectedRouter from "./Utils/ProtectedRouter";
-import JustTest from "./Componetes/Home/JustTest";
-
 
 
 function App() {
-
   const { scrollYProgress } = useScroll();
   return (
     <>
@@ -38,29 +35,18 @@ function App() {
         }}
       />
       <ParallaxProvider>
-      <Navbar/>
-         <Routes>
-        <Route path="/" element={<HeroSection/>} />
-        
-        <Route  element={<ProtectedRouter/>} >
-          <Route path="/text" element={<JustTest/>} />
-        </Route>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HeroSection />} />
 
+          
 
-
-        <Route path="/about" element={<AboutUs/>} />
-        <Route path="/projects" element={<ProjectsSection/>} />
-        <Route path="/contact" element={<ProjectsSection/>} />
-      
-      </Routes> 
-      <Footer/>
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/projects" element={<ProjectsSection />} />
+          <Route path="/contact" element={<ProjectsSection />} />
+        </Routes>
+        <Footer />
       </ParallaxProvider>
-
-
-
-
-
-         
     </>
   );
 }
